@@ -1,7 +1,7 @@
 
 
 var timeDisplayEl = $("#time-display");
-var inputEl = $(".input-text");
+
 
 
 var today = moment();
@@ -77,100 +77,119 @@ function checkTime () {
 
    //8am
     if (time1 === currentTime){
-        $(".input-text1").addClass("present"); //check before and after function
+        $("#input-text1").addClass("present"); //check before and after function
     } else if (time1 > currentTime) {
-        $(".input-text1").addClass("future");
+        $("#input-text1").addClass("future");
     } else if (time1 <currentTime) {
-        $(".input-text1").addClass("past");
+        $("#input-text1").addClass("past");
     };
 
     time2 = moment().startOf("hour").hour(9);
     time2 = time2.format("HH");
     //9am
     if (time2 === currentTime){
-        $(".input-text2").addClass("present");
+        $("#input-text2").addClass("present");
     } else if (time2 > currentTime) {
-        $(".input-text2").addClass("future");
+        $("#input-text2").addClass("future");
     } else if (time2 < currentTime) {
-        $(".input-text2").addClass("past");
+        $("#input-text2").addClass("past");
     };
 
     time3 = moment().startOf("hour").hour(10);
     time3 = time3.format("HH");
     //10am
     if (time3 === currentTime){
-        $(".input-text3").addClass("present");
+        $("#input-text3").addClass("present");
     } else if (time3 > currentTime) {
-        $(".input-text3").addClass("future");
+        $("#input-text3").addClass("future");
     } else if (time3 < currentTime) {
-        $(".input-text3").addClass("past");
+        $("#input-text3").addClass("past");
     };   
 
     time4 = moment().startOf("hour").hour(11);
     time4 = time4.format("HH");
     //11am
     if (time4 === currentTime){
-        $(".input-text4").addClass("present");
+        $("#input-text4").addClass("present");
     } else if (time4 > currentTime) {
-        $(".input-text4").addClass("future");
+        $("#input-text4").addClass("future");
     } else if (time4 < currentTime) {
-        $(".input-text4").addClass("past");
+        $("#input-text4").addClass("past");
     };
 
     //12pm
     time5 = moment().startOf("hour").hour(12);
     time5 = time5.format("HH");
     if (time5 === currentTime){
-        $(".input-text5").addClass("present");
+        $("#input-text5").addClass("present");
     } else if (time5 > currentTime) {
-        $(".input-text5").addClass("future"); 
+        $("#input-text5").addClass("future"); 
     } else if (time5 < currentTime) {
-        $(".input-text5").addClass("past");
+        $("#input-text5").addClass("past");
     };
 
     //1pm
     time6 = moment().startOf("hour").hour(13);
     time6 = time6.format("HH");
     if (time6 === currentTime){
-        $(".input-text6").addClass("present");
+        $("#input-text6").addClass("present");
     } else if (time6 > currentTime) {
-        $(".input-text6").addClass("future");
+        $("#input-text6").addClass("future");
     } else if (time6 < currentTime) {
-        $(".input-text6").addClass("past");
+        $("#input-text6").addClass("past");
     };
 
     //2pm
     time7 = moment().startOf("hour").hour(14);
     time7 = time7.format("HH");
     if (time7 === currentTime){
-        $(".input-text7").addClass("present");
+        $("#input-text7").addClass("present");
     } else if (time7 > currentTime) {
-        $(".input-text7").addClass("future");
+        $("#input-text7").addClass("future");
     } else if (time7 < currentTime) {
-        $(".input-text7").addClass("past");
+        $("#input-text7").addClass("past");
     };
 
     //3pm
     time8 = moment().startOf("hour").hour(15);
     time8 = time8.format("HH");
     if (time8 === currentTime){
-        $(".input-text8").addClass("present");
+        $("#input-text8").addClass("present");
     } else if (time8 > currentTime) {
-        $(".input-text8").addClass("future");
+        $("#input-text8").addClass("future");
     } else if (time8 < currentTime) {
-        $(".input-text8").addClass("past");
+        $("#input-text8").addClass("past");
     };
 
     //4pm
     time9 = moment().startOf("hour").hour(16);
     time9 = time9.format("HH");
     if (time9 === currentTime){
-        $(".input-text9").addClass("present");
+        $("#input-text9").addClass("present");
     } else if (time9 > currentTime) {
-        $(".input-text9").addClass("future");
+        $("#input-text9").addClass("future");
     } else if (time9 < currentTime) {
-        $(".input-text9").addClass("past");
+        $("#input-text9").addClass("past");
     };
 }
 
 checkTime();
+
+$(".saveBtn").on("click", function() {
+    
+    var input = $(this).siblings("textarea").val();
+    var hour = $(this).siblings().attr("id");
+
+    localStorage.setItem(hour, input);
+});
+
+  $("#input-text1").val(localStorage.getItem("hour8"));
+  $("#input-text2").val(localStorage.getItem("hour9"));
+  $("#input-text3").val(localStorage.getItem("hour10"));
+  $("#input-text4").val(localStorage.getItem("hour11"));
+  $("#input-text5").val(localStorage.getItem("hour12"));
+  $("#input-text6").val(localStorage.getItem("hour13"));
+  $("#input-text7").val(localStorage.getItem("hour14"));
+  $("#input-text8").val(localStorage.getItem("hour15"));
+  $("#input-text9").val(localStorage.getItem("hour16"));
+ 

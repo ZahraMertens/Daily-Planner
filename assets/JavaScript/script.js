@@ -183,6 +183,19 @@ $(".saveBtn").on("click", function() {
     localStorage.setItem(hour, input);
 });
 
+
+$(".saveBtn").dblclick(function() {
+
+
+    var input = $(this).siblings("textarea").val();
+    var hour = $(this).siblings().attr("id");
+
+    if (input !== null){
+    localStorage.removeItem(hour, input);
+    window.location.reload();
+    }
+});
+
   $("#input-text1").val(localStorage.getItem("hour8"));
   $("#input-text2").val(localStorage.getItem("hour9"));
   $("#input-text3").val(localStorage.getItem("hour10"));
@@ -192,4 +205,3 @@ $(".saveBtn").on("click", function() {
   $("#input-text7").val(localStorage.getItem("hour14"));
   $("#input-text8").val(localStorage.getItem("hour15"));
   $("#input-text9").val(localStorage.getItem("hour16"));
- 

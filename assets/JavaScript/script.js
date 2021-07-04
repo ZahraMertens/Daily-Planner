@@ -231,12 +231,20 @@ $(".saveBtn").dblclick(function() {
 });
 
 //Render input to specific textarea depending on element with specific id
-  $("#input-text1").val(localStorage.getItem("hour8"));
-  $("#input-text2").val(localStorage.getItem("hour9"));
-  $("#input-text3").val(localStorage.getItem("hour10"));
-  $("#input-text4").val(localStorage.getItem("hour11"));
-  $("#input-text5").val(localStorage.getItem("hour12"));
-  $("#input-text6").val(localStorage.getItem("hour13"));
-  $("#input-text7").val(localStorage.getItem("hour14"));
-  $("#input-text8").val(localStorage.getItem("hour15"));
-  $("#input-text9").val(localStorage.getItem("hour16"));
+$("#input-text1").val(localStorage.getItem("hour8"));
+$("#input-text2").val(localStorage.getItem("hour9"));
+$("#input-text3").val(localStorage.getItem("hour10"));
+$("#input-text4").val(localStorage.getItem("hour11"));
+$("#input-text5").val(localStorage.getItem("hour12"));
+$("#input-text6").val(localStorage.getItem("hour13"));
+$("#input-text7").val(localStorage.getItem("hour14"));
+$("#input-text8").val(localStorage.getItem("hour15"));
+$("#input-text9").val(localStorage.getItem("hour16"));
+
+// var inputField = $("col-10")
+
+ //for (var i = 0; i <inputField.length; i++ ){
+
+  //  inputField.val(localStorage.getItem(hour, input))
+
+ //}

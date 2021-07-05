@@ -65,14 +65,15 @@ time9 = time9.format("HH:mm a");
 var timeContainer9 = $(".time-9").text(time9);
 
 
+//Checking current time and round it to hour so the seconds and milli-seconds are 0...
+ 
+
 //Checking time to add classes to container for colours
 function checkTime () {
 
-    //Checking current time and round it to hour so the seconds and milli-seconds are 0...
     var currentTime = moment();
     currentTime = currentTime.startOf("hour");
     currentTime = currentTime.format("HH");
-
     console.log(time1)
     console.log(currentTime)
 
@@ -205,8 +206,8 @@ function checkTime () {
 checkTime();
 
 //Function to add input to local storage
-$(".saveBtn").on("click", function() {
-    
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault();
    
     var input = $(this).siblings("textarea").val(); //Getting input from any textarea element
     var hour = $(this).siblings().attr("id"); //Selecting the parent container with specific id
@@ -215,7 +216,9 @@ $(".saveBtn").on("click", function() {
     console.log(input);
 
     localStorage.setItem(hour, input); //for each text area setting new localStorage key and value while the key is the specific id element
+
 });
+
 
 //On Double-Click the user is able to remove text inputs from local storage
 $(".saveBtn").dblclick(function() {
@@ -241,10 +244,16 @@ $("#input-text7").val(localStorage.getItem("hour14"));
 $("#input-text8").val(localStorage.getItem("hour15"));
 $("#input-text9").val(localStorage.getItem("hour16"));
 
-// var inputField = $("col-10")
+//Clear storage every day at midnight
+function clearStorage(){
 
- //for (var i = 0; i <inputField.length; i++ ){
+    var currentTime2 = moment();
+    currentTime2 = currentTime2.format("HH:mm");
+    console.log(currentTime2)
 
-  //  inputField.val(localStorage.getItem(hour, input))
-
- //}
+    if (currentTime2 == "00:00" ){
+        localStorage.clear();
+        window.location.reload();
+    }
+}
+clearStorage();

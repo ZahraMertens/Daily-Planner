@@ -53,6 +53,6 @@ The webpage is a timed coding quiz, which confornts the user with multiple-choic
 
 The following GIF shows the web applications apperance and functionality:
 
-![Code-Quiz-Demo](./Assets/images/daily-planner.gif)
+![Code-Quiz-Demo](./assets/images/daily-planner.gif)
 
 ## Credits

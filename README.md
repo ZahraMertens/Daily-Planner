@@ -42,6 +42,8 @@ There was a given starter code including the main features and the style.css fil
 
 * WHEN I resize the page THEN I am presented with a responsive layout by using bootstraps grid layout
 
+* WHEN hover over the buttons THEN there is a tooltip displayed which explains that one click will save the input and a doule click removes the text
+
 ## Mock-Up
 
 The following GIF shows the web applications apperance and functionality:

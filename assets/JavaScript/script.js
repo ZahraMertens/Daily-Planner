@@ -231,6 +231,7 @@ $(".saveBtn").dblclick(function() {
     localStorage.removeItem(hour, input);
     window.location.reload();
     }
+
 });
 
 //Render input to specific textarea depending on element with specific id

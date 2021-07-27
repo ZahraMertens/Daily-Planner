@@ -11,14 +11,28 @@ The deployed Webpage is a simple calendar application that allows a user to save
 ## Table if Contents
 1. [General Information](#general-informaion)
 2. [Task Description](#task-description)
-3. [Mock-Up](#mock-up)
-4. [Bonus](#bonus)
-5. [Credits](#credits)
+3. [Technologies Used](#technologies-used)
+4. [Mock-Up](#mock-up)
+5. [Bonus](#bonus)
+6. [Credits](#credits)
 
 
 ## Task Describtion
 
 There was a given starter code including the main features and the style.css file. As our task we had to modify the calender application by writing the Javascript code to give it functionality especially by using moment.js. 
+
+## Technologies Used
+
+* HTML
+
+* CSS
+
+* JavaScript
+
+* Moment.js
+
+* jQuery
+
 
 
 ## Actual Behaviour
